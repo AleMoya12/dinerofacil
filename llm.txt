@@ -1,0 +1,26 @@
+Nombre del sitio: Dinero Facil
+Dominio: https://www.dinerofacil.com.ar/
+
+Dinero Facil es un sitio de educacion financiera en espanol de Argentina. Publica contenidos claros sobre finanzas personales, ahorro, presupuesto, deudas, inflacion, inversiones responsables, mercado, criptomonedas, seguridad digital y buenas practicas para tomar decisiones con mayor criterio.
+
+Intencion del contenido:
+Ayudar a personas que quieren ordenar su dinero, aprender conceptos basicos del mercado, entender riesgos antes de invertir y evitar errores frecuentes. El enfoque es educativo, sobrio y responsable.
+
+Secciones principales:
+- Finanzas personales
+- Inversiones
+- Criptomonedas
+- Mercado
+- Guias
+- Blog educativo
+
+Consultas que responde:
+- Como ordenar las finanzas personales.
+- Como armar un fondo de emergencia.
+- Que significa invertir y como evaluar riesgos.
+- Como interpretar noticias economicas sin tono especulativo.
+- Que son Bitcoin, stablecoins, exchanges y wallets.
+- Como proteger cuentas financieras y evitar estafas.
+
+Aclaracion:
+El contenido de Dinero Facil es educativo y no constituye asesoramiento financiero personalizado.
