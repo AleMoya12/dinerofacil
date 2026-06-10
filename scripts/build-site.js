@@ -347,6 +347,7 @@ function renderShell({ title, description, route = "", navCurrent = "", h1, intr
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${title}</title>
   <meta name="description" content="${description}">
+  <meta name="google-site-verification" content="ojWkLka3wSMWgBpgMtWkVcgtojZcQSoQ56-Rm8yndWY" />
   <link rel="canonical" href="${canonical}">
   <meta property="og:type" content="${type}">
   <meta property="og:locale" content="es_AR">
