@@ -1,9 +1,30 @@
 const fs = require("fs");
 const path = require("path");
 
-const root = path.join(__dirname, "..");
+const sourceRoot = path.join(__dirname, "..");
+const outputArg = process.argv[2];
+const root = outputArg ? path.resolve(sourceRoot, outputArg) : sourceRoot;
 const siteUrl = "https://www.dinerofacil.com.ar";
 const updated = "2026-06-10";
+
+function prepareOutputDir() {
+  if (root === sourceRoot) return;
+
+  const relativeOutput = path.relative(sourceRoot, root);
+  if (relativeOutput.startsWith("..") || path.isAbsolute(relativeOutput)) {
+    throw new Error(`Output directory must be inside the project: ${root}`);
+  }
+
+  fs.rmSync(root, { recursive: true, force: true });
+  fs.mkdirSync(root, { recursive: true });
+
+  for (const file of ["favicon.ico", "manifest.json", "robots.txt", "ai.txt", "llm.txt", "CNAME", ".nojekyll"]) {
+    const source = path.join(sourceRoot, file);
+    if (fs.existsSync(source)) fs.copyFileSync(source, path.join(root, file));
+  }
+
+  fs.cpSync(path.join(sourceRoot, "assets"), path.join(root, "assets"), { recursive: true });
+}
 
 const nav = [
   ["Finanzas personales", "/finanzas-personales"],
@@ -643,6 +664,8 @@ ${urls.map((url) => `  <url>
 </urlset>
 `;
 }
+
+prepareOutputDir();
 
 for (const page of pages) {
   const schema = [breadcrumbs([{ name: "Inicio", url: siteUrl }, ...(page.path ? [{ name: page.h1, url: pageUrl(page.path) }] : [])])];

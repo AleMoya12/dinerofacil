@@ -4,6 +4,10 @@
   "private": true,
   "description": "Sitio educativo de Dinero Facil sobre finanzas personales, inversiones, mercado y criptomonedas.",
   "scripts": {
+    "build": "node scripts/build-site.js",
+    "build:vercel": "node scripts/build-site.js dist",
+    "check:links": "node scripts/check-links.js",
+    "check:links:dist": "node scripts/check-links.js dist",
     "dev": "node server.js",
     "start": "node server.js"
   },
